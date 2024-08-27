@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Twilee",
+  "version": "1.3",
+  "description": "Replaces words in Twitter posts with leetspeak alternatives",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://x.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "web_accessible_resources": [{
+    "resources": ["default_twilee_settings.json"],
+    "matches": ["*://twitter.com/*", "*://x.com/*"]
+  }]
+}
