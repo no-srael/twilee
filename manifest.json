@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Twilee",
+  "version": "1.3",
+  "description": "Replaces words in Twitter posts with leetspeak alternatives",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "twilee@example.com"
+    }
+  },
+  "permissions": [
+    "storage",
+    "*://twitter.com/*",
+    "*://x.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://x.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "web_accessible_resources": [
+    "wordList.json",
+    "letterWordMapping.json"
+  ]
+}
