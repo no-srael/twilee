@@ -1,6 +1,6 @@
-Here's the HTML converted to Markdown:
-
 # 'Twilee'
+> :warning: **FIREFOX USERS**: You can download the extension right here on the store: https://addons.mozilla.org/en-GB/firefox/addon/twilee/; unfortunately chrome/brave users won't have that luxury.
+
 
 'Twilee' is short for *'Twitter Leetspeak'*. This extension adds a 👺-button next to the Twitter Post button. Pressing the button will replace whatever text is in the input box with *leetspeak* representation based on the defined options.
 
